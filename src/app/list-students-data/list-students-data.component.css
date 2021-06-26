@@ -3,7 +3,6 @@
   height: 100vh;
   background: lightgrey;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center
 }
@@ -12,23 +11,28 @@
    background-color: white;
    display: flex;
    flex-direction: column;
-   padding: 120px;
+   padding: 110px;
    border-radius: 15px;
    box-shadow: rgba(0, 0, 0, 0.);
    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 
-.mat-button{
-  background-color: green;
-  color: white;
+.mat-table {
+  background-color: #F3F3F3;
+  width: 25vw;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+h2{
+  text-align: center;
 }
 
-.mat-button:hover{
-  filter: brightness(80%);
+.mat-header-cell {
+  text-align: center;
+}
+
+.mat-cell {
+  text-align: center;
 }
 
 
-h2 {
-  margin-bottom: 50px;
-  font-size: 25px;
-}
