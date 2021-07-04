@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TestModel } from '../models/test.model';
-import { EvaluationsService } from '../services/evaluations.service';
+import { DisciplinEditionService } from '../services/disciplin-edition.service';
 import { EdicaoDisciplinaModel } from '../models/edicaoDisciplina.model';
 
 
@@ -19,22 +19,22 @@ const ELEMENT_DATA: EdicaoDisciplinaModel[] = [
 
 @Component({
   selector: 'app-tests',
-  templateUrl: './tests.component.html',
-  styleUrls: ['./tests.component.css']
+  templateUrl: './edicao-disciplina.component.html',
+  styleUrls: ['./edicao-disciplina.component.css']
 })
-export class TestsComponent implements OnInit {
+export class EdicaoDisciplinaComponent implements OnInit {
 
   dataSource: EdicaoDisciplinaModel[];
 
-  constructor(protected evaluationService: EvaluationsService) { }
+  constructor(protected evaluationService: DisciplinEditionService) { }
 
   ngOnInit() {
-    //this.evaluationService.getAllEditions().subscribe(
+    //this.DisciplinEditionService.getAllEditions().subscribe(
     //  (result: EdicaoDisciplinaModel[]) => this.dataSource = result
     //)
 
 
-    /* this.evaluationService.getApi().subscribe(
+    /* this.DisciplinEditionService.getApi().subscribe(
       (value) => console.log(value),
     ) */
     this.dataSource = ELEMENT_DATA;

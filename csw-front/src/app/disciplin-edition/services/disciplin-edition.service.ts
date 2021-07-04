@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class EvaluationsService {
+export class DisciplinEditionService {
 
   private baseUrl = 'http://ec2-3-16-76-105.us-east-2.compute.amazonaws.com';
 

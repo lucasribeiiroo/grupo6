@@ -8,9 +8,9 @@ const routes: Routes = [
         loadChildren: () => import('./evaluations/evaluations.module').then(m => m.EvaluationsModule),
     },
     {
-      path: 'disciplin-editions',
-      loadChildren: () => import('./disciplin-edition/evaluations.module').then(m => m.EvaluationsModule),
-  },
+        path: 'disciplin-editions',
+        loadChildren: () => import('./disciplin-edition/disciplin-edition.module').then(m => m.DisciplinEditionModule),
+    },
     {
         path: 'home',
         component: HomeComponent,

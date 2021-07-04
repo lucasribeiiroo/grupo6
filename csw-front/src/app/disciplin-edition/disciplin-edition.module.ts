@@ -12,9 +12,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatExpansionModule } from '@angular/material/expansion';
 
-import { TestsComponent } from './tests/tests.component';
-import { EvaluationsService } from './services/evaluations.service';
-import { EvaluationsRoutingModule } from './evaluations-routing.module';
+import { EdicaoDisciplinaComponent } from './tests/edicao-disciplina.component';
+import { DisciplinEditionService } from './services/disciplin-edition.service';
+import { DisciplinEditionRoutingModule } from './disciplin-edition-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { TestComponent } from './test/test.component';
 import { TestTableComponent } from './test/components/test-table/test-table.component';
@@ -26,7 +26,7 @@ import { FormTestsComponent } from './form-tests/form-tests.component';
 
 @NgModule({
   declarations: [
-    TestsComponent,
+    EdicaoDisciplinaComponent,
     DisciplinasTableComponent,
     TestComponent,
     TestTableComponent,
@@ -37,7 +37,7 @@ import { FormTestsComponent } from './form-tests/form-tests.component';
     FormTestsComponent,
   ],
   imports: [
-    EvaluationsRoutingModule,
+    DisciplinEditionRoutingModule,
     HttpClientModule,
     CommonModule,
     SharedModule,
@@ -51,10 +51,10 @@ import { FormTestsComponent } from './form-tests/form-tests.component';
     MatExpansionModule,
   ],
   providers: [
-    EvaluationsService,
+    DisciplinEditionService,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ]
 })
-export class EvaluationsModule { }
+export class DisciplinEditionModule { }

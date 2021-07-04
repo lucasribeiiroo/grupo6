@@ -12,7 +12,9 @@ export class DisciplinasTableComponent implements OnInit {
   id: string;
   year: number;
   semester: string;
-  displayedColumns: string[] =  ['id', 'year', 'semester', 'subscribes','Buttons'];
+  subscribers: any[];
+  active: boolean;
+  displayedColumns: string[] =  ['id', 'year', 'semester','active', 'subscribes','Buttons'];
 
   constructor(protected router: Router,
   ) {
@@ -23,6 +25,8 @@ export class DisciplinasTableComponent implements OnInit {
     this.id = this.dataSource[1].id;
     this.year = this.dataSource[1].year;
     this.semester = this.dataSource[1].semester;
+    this.subscribers = this.dataSource[1].subscribers;
+    this.active = this.dataSource[1].active;
   }
 
   onClickItem(item: string) {
@@ -32,11 +36,13 @@ export class DisciplinasTableComponent implements OnInit {
   }
 
   onClickSubscribes(item){
-  this.router.navigateByUrl("/subscribes", { state: { dataSource: this.dataSource, item: item } });
+    this.router.navigateByUrl("/home", { state: { dataSource: this.dataSource, item: item } });
   }
 
   onClickEdit(item){
-    this.router.navigateByUrl("/edit", { state: { dataSource: this.dataSource, item: item } });
+    const itemSelected = this.dataSource.find(i => i.id === item);
+    console.log({itemSelected});
+    this.router.navigateByUrl("/edit", { state: { dataSource: this.dataSource, item: itemSelected } });
   }
 
   onClickDelete(){
