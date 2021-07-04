@@ -7,6 +7,7 @@ import { EdicaoDisciplinaModel } from 'src/app/disciplin-edition/models/edicaoDi
   templateUrl: './edicao-disciplinas-table.component.html',
   styleUrls: ['./edicao-disciplinas-table.component.css']
 })
+
 export class DisciplinasTableComponent implements OnInit {
   @Input() dataSource: EdicaoDisciplinaModel[];
   id: string;
@@ -16,10 +17,7 @@ export class DisciplinasTableComponent implements OnInit {
   active: boolean;
   displayedColumns: string[] =  ['id', 'year', 'semester','active', 'subscribes','Buttons'];
 
-  constructor(protected router: Router,
-  ) {
-
-  };
+  constructor(protected router: Router) {};
 
   ngOnInit() {
     this.id = this.dataSource[1].id;
@@ -45,7 +43,5 @@ export class DisciplinasTableComponent implements OnInit {
     this.router.navigateByUrl("/edit", { state: { dataSource: this.dataSource, item: itemSelected } });
   }
 
-  onClickDelete(){
-
-  }
+  onClickDelete(){ }
 }

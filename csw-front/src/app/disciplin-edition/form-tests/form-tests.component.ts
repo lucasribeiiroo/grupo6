@@ -10,7 +10,7 @@ export class FormTestsComponent implements OnInit {
   item: any;
 
   constructor(protected router: Router) {
-    //this.item = this.router.getCurrentNavigation().extras.state.item;
+    this.item = this.router.getCurrentNavigation().extras.state.item;
    }
 
   ngOnInit(): void {
