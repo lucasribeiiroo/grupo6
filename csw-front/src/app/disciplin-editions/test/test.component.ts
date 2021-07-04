@@ -13,8 +13,8 @@ export class TestComponent{
   tests: TestModel[];
 
   constructor(protected router: Router) {
-    this.tests = this.router.getCurrentNavigation().extras.state.test;
-    this.subject = this.router.getCurrentNavigation().extras.state.subject;
+    //this.tests = this.router.getCurrentNavigation().extras.state.test;
+    //this.subject = this.router.getCurrentNavigation().extras.state.subject;
   }
 
  /*  onClickPrimaryButton(event){

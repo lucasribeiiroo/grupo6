@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { RouterModule } from '@angular/router';
-import { DisciplinasTableComponent } from './tests/components/edicao-disciplinas-table/edicao-disciplinas-table.component';
+import { EdicaoDisciplinaTableComponent } from './tests/components/edicao-disciplinas-table/edicao-disciplinas-table.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -18,30 +18,21 @@ import { DisciplinEditionRoutingModule } from './disciplin-edition-routing.modul
 import { SharedModule } from '../shared/shared.module';
 import { TestComponent } from './test/test.component';
 import { TestTableComponent } from './test/components/test-table/test-table.component';
-import { ResultsComponent } from './results/results.component';
-import { ResultsTableComponent } from './results/components/results-table/results-table.component';
-import { QuestionsComponent } from './questions/questions.component';
-import { QuestionsExpansionComponent } from './questions/components/questions-expansion/questions-expansion.component';
-import { FormTestsComponent } from './form-tests/form-tests.component';
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 @NgModule({
   declarations: [
     EdicaoDisciplinaComponent,
-    DisciplinasTableComponent,
+    EdicaoDisciplinaTableComponent,
     TestComponent,
     TestTableComponent,
-    ResultsComponent,
-    ResultsTableComponent,
-    QuestionsComponent,
-    QuestionsExpansionComponent,
-    FormTestsComponent,
+    EditFormComponent,
   ],
   imports: [
     DisciplinEditionRoutingModule,
     HttpClientModule,
     CommonModule,
     SharedModule,
-    RouterModule,
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,

@@ -9,7 +9,7 @@ const routes: Routes = [
     },
     {
         path: 'disciplin-editions',
-        loadChildren: () => import('./disciplin-edition/disciplin-edition.module').then(m => m.DisciplinEditionModule),
+        loadChildren: () => import('./disciplin-editions/disciplin-edition.module').then(m => m.DisciplinEditionModule),
     },
     {
         path: 'home',

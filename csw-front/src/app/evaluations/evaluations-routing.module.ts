@@ -21,7 +21,7 @@ const routes: Routes = [
         component: ResultsComponent,
     },
     {
-        path: 'questions',
+        path: 'test',
         component: QuestionsComponent,
     },
     {

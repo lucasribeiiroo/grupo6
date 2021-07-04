@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { EdicaoDisciplinaModel } from 'src/app/disciplin-edition/models/edicaoDisciplina.model';
+import { EdicaoDisciplinaModel } from 'src/app/disciplin-editions/models/edicaoDisciplina.model';
 
 @Component({
   selector: 'app-edicao-disciplinas-table',
@@ -8,7 +8,7 @@ import { EdicaoDisciplinaModel } from 'src/app/disciplin-edition/models/edicaoDi
   styleUrls: ['./edicao-disciplinas-table.component.css']
 })
 
-export class DisciplinasTableComponent implements OnInit {
+export class EdicaoDisciplinaTableComponent implements OnInit {
   @Input() dataSource: EdicaoDisciplinaModel[];
   id: string;
   year: number;
@@ -17,7 +17,7 @@ export class DisciplinasTableComponent implements OnInit {
   active: boolean;
   displayedColumns: string[] =  ['id', 'year', 'semester','active', 'subscribes','Buttons'];
 
-  constructor(protected router: Router) {};
+  constructor(public router: Router) {};
 
   ngOnInit() {
     this.id = this.dataSource[1].id;
@@ -39,7 +39,6 @@ export class DisciplinasTableComponent implements OnInit {
 
   onClickEdit(item){
     const itemSelected = this.dataSource.find(i => i.id === item);
-    console.log({itemSelected});
     this.router.navigateByUrl("/edit", { state: { dataSource: this.dataSource, item: itemSelected } });
   }
 

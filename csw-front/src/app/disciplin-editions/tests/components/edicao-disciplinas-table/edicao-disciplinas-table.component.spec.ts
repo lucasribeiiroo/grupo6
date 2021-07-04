@@ -4,15 +4,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
-import { DisciplinasTableComponent } from './edicao-disciplinas-table.component';
+import { EdicaoDisciplinaTableComponent } from './edicao-disciplinas-table.component';
 
 describe('DisciplinasTableComponent', () => {
-  let component: DisciplinasTableComponent;
-  let fixture: ComponentFixture<DisciplinasTableComponent>;
+  let component: EdicaoDisciplinaTableComponent;
+  let fixture: ComponentFixture<EdicaoDisciplinaTableComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ DisciplinasTableComponent ],
+      declarations: [ EdicaoDisciplinaTableComponent ],
       imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
@@ -23,7 +23,7 @@ describe('DisciplinasTableComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DisciplinasTableComponent);
+    fixture = TestBed.createComponent(EdicaoDisciplinaTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

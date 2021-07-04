@@ -2,8 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
 import { EdicaoDisciplinaComponent } from "./tests/edicao-disciplina.component";
-import { TestComponent } from "./test/test.component";
-import { FormTestsComponent } from "./form-tests/form-tests.component";
+import { EditFormComponent } from "./edit-form/edit-form.component";
 
 const routes: Routes = [
     {
@@ -12,11 +11,7 @@ const routes: Routes = [
     },
     {
         path: 'edit',
-        component: FormTestsComponent,
-    },
-    {
-        path: 'subscribers',
-        component: TestComponent,
+        component: EditFormComponent,
     },
 ];
 
