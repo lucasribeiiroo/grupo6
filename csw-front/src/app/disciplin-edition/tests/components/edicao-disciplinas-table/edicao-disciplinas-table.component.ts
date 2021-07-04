@@ -30,4 +30,16 @@ export class DisciplinasTableComponent implements OnInit {
     //const tests = this.dataSource.filter( e => e.subjects.includes(subject));
     //this.router.navigateByUrl("/test", { state: { test: tests, subject: subject } });
   }
+
+  onClickSubscribes(item){
+  this.router.navigateByUrl("/subscribes", { state: { dataSource: this.dataSource, item: item } });
+  }
+
+  onClickEdit(item){
+    this.router.navigateByUrl("/edit", { state: { dataSource: this.dataSource, item: item } });
+  }
+
+  onClickDelete(){
+
+  }
 }

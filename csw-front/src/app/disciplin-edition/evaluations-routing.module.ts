@@ -3,8 +3,6 @@ import { RouterModule, Routes } from "@angular/router";
 
 import { TestsComponent } from "./tests/tests.component";
 import { TestComponent } from "./test/test.component";
-import { ResultsComponent } from "./results/results.component";
-import { QuestionsComponent } from "./questions/questions.component";
 import { FormTestsComponent } from "./form-tests/form-tests.component";
 
 const routes: Routes = [
@@ -13,16 +11,8 @@ const routes: Routes = [
         component: TestsComponent,
     },
     {
-        path: 'test',
+        path: 'subscribers',
         component: TestComponent,
-    },
-    {
-        path: 'results',
-        component: ResultsComponent,
-    },
-    {
-        path: 'questions',
-        component: QuestionsComponent,
     },
     {
         path: 'form-test',
