@@ -12,7 +12,7 @@ export class DisciplinasTableComponent implements OnInit {
   id: string;
   year: number;
   semester: string;
-  displayedColumns: string[] =  ['id', 'year', 'semester', 'Buttons'];
+  displayedColumns: string[] =  ['id', 'year', 'semester', 'subscribes','Buttons'];
 
   constructor(protected router: Router,
   ) {
