@@ -12,10 +12,12 @@ export class DisciplinasTableComponent implements OnInit {
   id: string;
   year: number;
   semester: string;
-  displayedColumns: string[] = ['id', 'year', 'semester', 'inscritos', 'descricao', 'visualizar', 'editar', 'excluir'];
+  displayedColumns: string[] =  ['id', 'year', 'semester', 'Buttons'];
 
   constructor(protected router: Router,
-  ) {}
+  ) {
+
+  };
 
   ngOnInit() {
     this.id = this.dataSource[1].id;
@@ -23,8 +25,9 @@ export class DisciplinasTableComponent implements OnInit {
     this.semester = this.dataSource[1].semester;
   }
 
-  onClickItem(subject: string) {
-
-    //this.router.navigateByUrl("/test", { state: { test: tests } });
+  onClickItem(item: string) {
+    console.log({item});
+    //const tests = this.dataSource.filter( e => e.subjects.includes(subject));
+    //this.router.navigateByUrl("/test", { state: { test: tests, subject: subject } });
   }
 }

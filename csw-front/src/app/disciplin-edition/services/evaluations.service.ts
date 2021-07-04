@@ -1,8 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TestModel } from '../models/test.model';
-import { EdicaoDisciplinaModel } from '../models/edicaoDisciplina.model'
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +12,12 @@ export class EvaluationsService {
   constructor(protected httpClient: HttpClient) { }
 
   getAllEditions(): Observable<any[]>{
-    return this.httpClient.get<EdicaoDisciplinaModel[]>(`${this.baseUrl}/editions`);
+    var reqHeader = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer 2132132dw'
+   });
+   console.log(reqHeader)
+    return this.httpClient.get<any>(`${this.baseUrl}/editions`, { headers: reqHeader });
   }
 
   /* getApi(): Observable<any> {

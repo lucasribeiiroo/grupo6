@@ -29,14 +29,15 @@ export class TestsComponent implements OnInit {
   constructor(protected evaluationService: EvaluationsService) { }
 
   ngOnInit() {
-    this.evaluationService.getAllEditions().subscribe(
-      (result: EdicaoDisciplinaModel[]) => this.dataSource = result
-    )
+    //this.evaluationService.getAllEditions().subscribe(
+    //  (result: EdicaoDisciplinaModel[]) => this.dataSource = result
+    //)
 
 
     /* this.evaluationService.getApi().subscribe(
       (value) => console.log(value),
     ) */
+    this.dataSource = ELEMENT_DATA;
   }
 
 }
