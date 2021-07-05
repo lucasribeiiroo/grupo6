@@ -11,14 +11,14 @@ export class DisciplinEditionService {
 
   constructor(protected httpClient: HttpClient) { }
 
-  getAllEditions(): Observable<any[]>{
-    var reqHeader = new HttpHeaders({
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer 2132132dw'
-   });
-   console.log(reqHeader)
-    return this.httpClient.get<any>(`${this.baseUrl}/editions`, { headers: reqHeader });
-  }
+  //getAllEditions(): Observable<any[]>{
+  //  var reqHeader = new HttpHeaders({
+  //    'Content-Type': 'application/json',
+  //    'Authorization': 'Bearer 2132132dw'
+  // });
+  // console.log(reqHeader)
+  //  return this.httpClient.get<any>(`${this.baseUrl}/editions`, { headers: reqHeader });
+  //}
 
   /* getApi(): Observable<any> {
     const url = 'ec2-54-94-166-37.sa-east-1.compute.amazonaws.com:8083/api/students';

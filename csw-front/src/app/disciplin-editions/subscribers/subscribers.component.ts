@@ -3,12 +3,12 @@ import { Router } from '@angular/router';
 import { EdicaoDisciplinaModel } from 'src/app/disciplin-editions/models/edicaoDisciplina.model';
 
 @Component({
-  selector: 'app-edicao-disciplinas-table',
-  templateUrl: './edicao-disciplinas-table.component.html',
-  styleUrls: ['./edicao-disciplinas-table.component.css']
+  selector: 'app-subscribers-table',
+  templateUrl: './subscribers.component.html',
+  styleUrls: ['./subscribers.component.css']
 })
 
-export class EdicaoDisciplinaTableComponent implements OnInit {
+export class SubscribersComponent implements OnInit {
   @Input() dataSource: EdicaoDisciplinaModel[];
   id: string;
   year: number;
@@ -32,7 +32,7 @@ export class EdicaoDisciplinaTableComponent implements OnInit {
   }
 
   onClickSubscribes(item){
-    this.router.navigateByUrl("/home", { state: { dataSource: this.dataSource, item: item } });
+    this.router.navigateByUrl(`/subscribers/${item}`, { state: { dataSource: this.dataSource, item: item } });
   }
 
   onClickEdit(item){
